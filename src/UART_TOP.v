@@ -27,7 +27,7 @@ module tt_um_UART (
     Transmitter T1(
         .clk(clk), 
         .rst_n(rst_n), 
-        .Transmit(uio_out[0]/* Transmit_btn*/),
+        .Transmit(uio_in[0]/* Transmit_btn*/),
         .data(ui_in),
         
         .TxD(uio_out[7])
