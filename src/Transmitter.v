@@ -28,7 +28,7 @@ module Transmitter(
     );
     
     reg [3:0] bit_counter =0; //counter for counting 10 bits, start data stop
-    reg [13:0] baudrate_counter =0; //9600 = clock rate / bits per sec = 50mhz/9600 = 5208(13 bits) or 100mhz/9600=10,416=13bts
+    reg [13:0] baudrate_counter =0; //9600 = clock rate / bits per sec = 50mhz/9600 = 5208(13 bits) or 100mhz/9600=10,416=14 bits
     reg [9:0] shift_right_reg =0 ; //10 bits seria;lly transmitted trhough uart port
     reg state =0, next_state=0; //idle, trasmit states
     reg shift; //shift signal to start shifting bits in the uart
