@@ -13,7 +13,7 @@ module tt_um_UART (
     inout [7:0] uio_out,   // Dedicated outputs - connected to the 7 segment display
     
     input [7:0] uio_in,  // IOs: Bidirectional Output path
-    // output [7:0] uio_oe,   // IOs: Bidirectional Enable path (active high: 0=input, 1=output)
+    output [7:0] uio_oe,   // IOs: Bidirectional Enable path (active high: 0=input, 1=output)
     // output TxD/*, TxD_Debug, rst_n_Debug, Transmit_btn_Debug, clk_Debug,*/
 //    output [7:0] anode, ssd
 );
