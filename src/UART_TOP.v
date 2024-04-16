@@ -4,7 +4,7 @@
 
 
 module tt_um_UART (
-    input clk, rst_n, Transmit_btn,
+    input ena, clk, rst_n, Transmit_btn,
     input [7:0] data,
     
     output TxD/*, TxD_Debug, rst_n_Debug, Transmit_btn_Debug, clk_Debug,*/
