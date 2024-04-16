@@ -22,11 +22,11 @@ module tt_um_UART (
         .TxD(TxD)
         );
         
-    debouncer_clock DB(
-            .i_Clk(clk), 
-            .i_Switch(Transmit_btn), 
-            .o_Switch(Transmit_out)
-            );
+    // debouncer_clock DB(
+    //         .i_Clk(clk), 
+    //         .i_Switch(Transmit_btn), 
+    //         .o_Switch(Transmit_out)
+    //         );
             
 //   SSD_Display(
 //            .clk(clk), 
