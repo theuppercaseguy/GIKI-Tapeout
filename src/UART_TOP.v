@@ -10,7 +10,7 @@ module tt_um_UART (
     input [7:0] ui_in,    // Dedicated inputs - connected to the input switches
     output [7:0] uo_out,   // IOs: Bidirectional Input path
     
-    inout [7:0] uio_out,   // Dedicated outputs - connected to the 7 segment display
+    output [7:0] uio_out,   // Dedicated outputs - connected to the 7 segment display
     
     input [7:0] uio_in,  // IOs: Bidirectional Output path
     output [7:0] uio_oe,   // IOs: Bidirectional Enable path (active high: 0=input, 1=output)
