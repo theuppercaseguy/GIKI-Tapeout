@@ -17,8 +17,8 @@ project:
   source_files:        
     - "Reciever.v"
     - "Transmitter.v"
-    - "debouncer_clock.v"
-    - "SSD_Display.v"
+    # - "debouncer_clock.v"
+    # - "SSD_Display.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
