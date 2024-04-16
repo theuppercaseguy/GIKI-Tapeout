@@ -43,14 +43,14 @@ pinout:
   uo[7]: ""
 
   # Bidirectional pins
-  uio[0]: "Transmit_btn" //input
+  uio[0]: "Transmit_btn" #input
   uio[1]: ""
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
   uio[5]: ""
   uio[6]: ""
-  uio[7]: "TxD" //output
+  uio[7]: "TxD" #output
 
 # Do not change!
 yaml_version: 6
