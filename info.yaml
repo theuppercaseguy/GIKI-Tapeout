@@ -14,7 +14,8 @@ project:
   top_module:  "tt_um_UART"
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
-  source_files:        
+  source_files:
+    - "UART_TOP.v"
     - "Reciever.v"
     - "Transmitter.v"
     # - "debouncer_clock.v"
