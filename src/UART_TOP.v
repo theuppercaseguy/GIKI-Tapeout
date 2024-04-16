@@ -21,7 +21,7 @@ module tt_um_UART (
     wire Transmit_out;
 
     assign uo_out = 8'b11111111;
-    assign uio_out[6:1] = 6'b111111;
+    assign uio_out[6:0] = 7'b1111111;
     assign uio_oe = 8'b11111111;
     
     Transmitter T1(
