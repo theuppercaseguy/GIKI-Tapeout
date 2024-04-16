@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/UNI/GIKI-Tapeout/UART-TO/UART-TO.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Mon Apr 15 18:57:54 2024" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Tue Apr 16 14:30:39 2024" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2258646" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "19eeb439-2ca6-43ad-a47b-b4c6a850f5b6" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "a8729a0cd576446fb5a567f8520c581e" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "60" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "61" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz" -context "user_environment"
@@ -36,7 +36,7 @@ webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Processes -value "22" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "3" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Time -value "0.51_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "53112_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1499043253 -regid "" -xml D:/UNI/GIKI-Tapeout/UART-TO/UART-TO.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/UNI/GIKI-Tapeout/UART-TO/UART-TO.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/UNI/GIKI-Tapeout/UART-TO/UART-TO.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Time -value "0.66_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Compiler_Memory -value "53204_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1800184563 -regid "" -xml D:/UNI/GIKI-Tapeout/UART-TO/UART-TO.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/UNI/GIKI-Tapeout/UART-TO/UART-TO.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/UNI/GIKI-Tapeout/UART-TO/UART-TO.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
