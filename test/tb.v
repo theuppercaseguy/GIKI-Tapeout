@@ -21,7 +21,7 @@
 
 `timescale 1ns/1ps // Define timescale
 
-module tt_um_tb();
+module tt_um_UART();
 
     // Define signals
     reg clk;
