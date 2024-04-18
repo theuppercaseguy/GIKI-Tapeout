@@ -15,9 +15,9 @@ project:
   
   # List your project's source files here. Source files must be in ./src and you must list each source file separately, one per line:
   source_files:
-    - "debouncer.v"
+    - "Debouncer.v"
     - "reciver.v"
-    - "transmitter.v"
+    - "Transmitter.v"
     - "UART_Transciver_50mhz.v"
     - "Uart_Transciver_Top.v"
 
