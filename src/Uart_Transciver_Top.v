@@ -56,7 +56,7 @@ module tt_um_Uart_Transciver(
         .data(ui_in),            //input data for transmitting
          
         .Transmit_btn(uio_in[0]),    //push button used to transmit data
-        .Tansmit_switch(uio_in[1])   //,
+        .Tansmit_switch(uio_in[1]),   //,
            
         .uart_rxd(uio_in[2]),        // Receiver line for the receiver module
         
