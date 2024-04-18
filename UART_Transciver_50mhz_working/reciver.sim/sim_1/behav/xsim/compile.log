@@ -1,0 +1,11 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/UNI/GIKI-Tapeout/reciver/reciver.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/UNI/GIKI-Tapeout/reciver/reciver.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/UNI/GIKI-Tapeout/reciver/reciver.srcs/sources_1/new/reciver.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tt_um_UART
+INFO: [VRFC 10-311] analyzing module receiver
+WARNING: [VRFC 10-756] identifier PAYLOAD_BITS is used before its declaration [D:/UNI/GIKI-Tapeout/reciver/reciver.srcs/sources_1/new/reciver.v:86]
+INFO: [VRFC 10-311] analyzing module ClockDivider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/UNI/GIKI-Tapeout/reciver/reciver.srcs/sim_1/new/rec_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_tt_um_UART
