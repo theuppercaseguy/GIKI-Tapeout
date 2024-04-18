@@ -21,119 +21,60 @@
 
 `timescale 1ns/1ps // Define timescale
 
-module tt_um_UART();
+module tt_um_Uart_Transciver_tb;
 
-    // Define signals
+    // Parameters
+    parameter CLK_PERIOD = 10; // Clock period in nanoseconds
+
+    // Signals
     reg clk;
     reg rst_n;
-    reg Transmit;
-    reg [7:0] data;
-    wire TxD;
+    reg [7:0] ui_in;
+    wire [7:0] uo_out;
+    reg [7:0] uio_in;
+    wire [7:0] uio_out;
+    reg [7:0] uio_oe;
+    reg ena;
 
-    // Instantiate the UART transmitter module
-    Transmitter UUT(
+    // Instantiate the module under test
+    tt_um_Uart_Transciver UUT (
         .clk(clk),
         .rst_n(rst_n),
-        .Transmit(Transmit),
-        .data(data),
-        .TxD(TxD)
+        .ui_in(ui_in),
+        .uo_out(uo_out),
+        .uio_in(uio_in),
+        .uio_out(uio_out),
+        .uio_oe(uio_oe),
+        .ena(ena)
     );
 
     // Clock generation
-    always begin
+    always #((CLK_PERIOD)/2) clk = ~clk;
+
+    // Initial values
+    initial begin
         clk = 0;
-        #5; // 100 MHz clock period
-        clk = 1;
-        #5;
-    end
+        rst_n = 0;
+        ui_in = 8'b0;
+        uio_in = 8'b0;
+        uio_oe = 8'b11111111;
+        ena = 1'b0;
 
-    // Stimulus
-    initial begin
         // Reset
-//        rst_n = 0;
-        Transmit = 0;
-        data = 8'h00;
-        #0;
-        data = 0;
-        rst_n = 1;
+        #10 rst_n = 1'b1;
 
-        // Wait for a few clock cycles
-        #52070;
+        // Enable the design
+        #20 ena = 1'b1;
 
-        // Start transmission
-        Transmit = 1;
-        data = 8'hAB;
+        // Test scenario
+        #30 ui_in = 8'b11001001; // Input data for transmitting
+        #40 uio_in[0] = 1'b1;     // Set Transmit_btn high
+        #50 uio_in[1] = 1'b0;     // Set Transmit_switch low
+        #60 uio_in[2] = 1'b0;     // Set uart_rxd low (simulate no data received)
+        uio_in[0] = 1'b0;
         
-        #572990;
-        data = 8'hAA;
-        #572990;
-        data = 8'hBB;
-        #572990;
-        data = 8'hCC;
-                
-                
-        
-
-        // Stop transmission
-        Transmit = 0;
-        #10;
-
-        // Add more test cases as needed
-        // For example: Test with different data values, different durations of transmission, etc.
-
-        // End simulation
-        $finish;
+        // Wait for some cycles to observe the output
+        #100 $finish;
     end
 
 endmodule
-
-
-/*
-module UART_TB();
-    reg clk, rst_n, Transmit;
-    reg [7:0] data;
-    
-    wire TxD, TxD_Debug, transmit_Debug, Transmit_btn_Debug, clk_Debug;
-
-UART dut(
-    clk, rst_n, Transmit,
-    data,
-    
-    TxD, TxD_Debug, transmit_Debug, Transmit_btn_Debug, clk_Debug
-    );
-
-    always #5 clk = ~clk;
-    
-    initial begin
-        
-        clk = 1'b0;
-        rst_n = 1'b0;
-       
-        Transmit = 1'b1;
-        data = 0;
-//        TxD = 1'b1;
-        #5;
-       
-        rst_n = 1'b1;
-        #5;
-    end
-    
-    initial 
-    begin
-        #15;
-        Transmit = 1'b0;
-        #5;
-        data = 8'hAA;
-        Transmit = 1'b1;
-        #100;
-        Transmit = 1'b0;
-        #5;
-        data = 8'hBB;
-        Transmit = 1'b1;
-        #100;
-        $finish;
-    end
-
-endmodule
-
-*/
