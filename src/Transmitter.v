@@ -28,7 +28,7 @@ module Transmitter(
     );
     
     reg [3:0] bit_counter =0; //counter for counting 10 bits, start data stop
-    reg [13:0] baudrate_counter =0; //9600 = clock rate / bits per sec = 50mhz/9600 = 5208(13 bits) or 100mhz/9600=10,416=14 bits
+    reg [13:0] baudrate_counter =0; //9600 = clock rate / bits per sec = 50mhz/9600 = 5208(13 bits) or 100mhz/9600=10,416=13bts
     reg [9:0] shift_right_reg =0 ; //10 bits seria;lly transmitted trhough uart port
     reg state =0, next_state=0; //idle, trasmit states
     reg shift; //shift signal to start shifting bits in the uart
@@ -48,7 +48,7 @@ module Transmitter(
         else
         begin
             baudrate_counter <= baudrate_counter + 1;
-            if(baudrate_counter == /*5208*/ 10416)
+            if(baudrate_counter == /*5208*/ 10415) //need to change for a 50mhz clock
             begin
                 state <= next_state; //state changes from idel to transmission state
                 baudrate_counter <= 14'b00000000000000;
@@ -58,7 +58,7 @@ module Transmitter(
                 end
                 if(clear == 1'b1)
                 begin
-                    bit_counter <= 1'b0;
+                    bit_counter <= 4'b0000;
                 end
                 if(shift ==1'b1)
                 begin
@@ -92,7 +92,7 @@ module Transmitter(
             end
         end
         1: begin //transmission state
-           if(bit_counter == 10) // all 10 bits are transmitted
+           if(bit_counter == 9) // all 10(0-9) bits are transmitted
            begin
             next_state <=0; // switch from transmission mode to idle mode, beacause all the 10 bits are trassnmitted
             clear <= 1'b1; //clear all the counters
@@ -109,26 +109,3 @@ module Transmitter(
     
         
 endmodule
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
