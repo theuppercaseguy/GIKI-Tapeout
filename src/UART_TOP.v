@@ -68,7 +68,7 @@ module tt_um_UART (
         ) i_uart_rx(
             .clk          (clk        ), // Top level system clock input.
             .resetn       (rst_n         ), // Asynchronous active low reset.
-            .uart_rxd     (uart_rxd      ), // UART Recieve pin.
+            .uart_rxd     (uio_in[2]      ), // UART Recieve pin.
             .uart_rx_en   (1'b1          ), // Recieve enable
             .uart_rx_break(uart_rx_break ), // Did we get a BREAK message?
             .uart_rx_valid(uart_rx_valid ), // Valid data recieved and available.
