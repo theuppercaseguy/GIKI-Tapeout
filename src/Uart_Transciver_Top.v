@@ -66,8 +66,11 @@ module tt_um_Uart_Transciver(
         .uart_rx_break(uio_out[4]),   // Did we get a BREAK message?
         .uart_rx_valid(uio_out[5])    // Valid data recieved and available.
     );
+    assign uio_out[0] = 1'b0;
+    assign uio_out[1] = 1'b0;
+    assign uio_out[2] = 1'b0;
 
-    assign uio_out[6] = 1'b1;
-    assign uio_out[7] = 1'b1;
+    assign uio_out[6] = 1'b0;
+    assign uio_out[7] = 1'b0;
 
 endmodule
