@@ -21,7 +21,7 @@
 
 `timescale 1ns/1ps // Define timescale
 
-module tt_um_Uart_Transciver_tb;
+module tb;
 
     // Parameters
     parameter CLK_PERIOD = 10; // Clock period in nanoseconds
