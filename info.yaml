@@ -18,6 +18,7 @@ project:
     - "UART_TOP.v"
     - "Reciever.v"
     - "Transmitter.v"
+    - "Debouncer.v"
     # - "debouncer_clock.v"
     # - "SSD_Display.v"
 
@@ -44,8 +45,8 @@ pinout:
   uo[7]: "uo_out[7]"
 
   # Bidirectional pins
-  uio[0]: "uio_out[0]" #input
-  uio[1]: ""
+  uio[0]: "uio_in[0]" #input
+  uio[1]: "uio_in[1]" #input
   uio[2]: ""
   uio[3]: ""
   uio[4]: ""
