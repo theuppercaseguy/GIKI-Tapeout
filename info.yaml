@@ -47,7 +47,7 @@ pinout:
   # Bidirectional pins
   uio[0]: "uio_in[0]" #input
   uio[1]: "uio_in[1]" #input
-  uio[2]: ""
+  uio[2]: "uio_in[2]" #rxd recive pin
   uio[3]: ""
   uio[4]: ""
   uio[5]: ""
