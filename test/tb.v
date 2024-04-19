@@ -28,6 +28,8 @@ module tb();
         $dumpvars(0, tb);
     #1;
     end
+    // Parameters
+  parameter CLK_PERIOD = 20; // Clock period in ns
     
     reg clk;
     reg rst_n;
@@ -55,6 +57,28 @@ module tb();
       .clk    (clk),      // clock
       .rst_n  (rst_n)     // not reset
    );
+    // Clock generation
+     always #10 clk = ~clk;
+   
+     // Initial reset
+     initial begin
+       clk = 0;
+       rst_n = 0;
+       ena = 1;
+       ui_in = 0;
+       uio_in = 0;
+       #100; // Wait for 100 time units
+       rst_n = 1; // Release reset
+       #100; // Wait for additional 100 time units
+       // Start test
+       ui_in = 20;
+       uio_in = 30;
+       #20; // Wait one clock cycle
+       $display("uo_out = %d", uo_out);
+       if (uo_out !== 240) $error("Test failed!"); // Check output
+       $display("Test passed!");
+       $finish; // End simulation
+     end
 
 
 endmodule

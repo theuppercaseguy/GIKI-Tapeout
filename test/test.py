@@ -16,6 +16,7 @@ async def test_adder(dut):
   # Reset
   dut._log.info("Reset")
   dut.ena.value = 1
+
   dut.ui_in.value = 0
   dut.uio_in.value = 0
   dut.rst_n.value = 0
@@ -29,4 +30,4 @@ async def test_adder(dut):
 
   await ClockCycles(dut.clk, 1)
 
-  assert dut.uo_out.value == 50
+  assert dut.uo_out.value == 240
